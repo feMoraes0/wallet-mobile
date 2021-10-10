@@ -1,11 +1,13 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import SettingsCard from './components/SettingsCard';
 import styles from './style';
 
 const template = () => {
   return (
     <View style={styles.container}>
-      <Text>Home Screen Template</Text>
+      <SettingsCard />
     </View>
   );
 }
