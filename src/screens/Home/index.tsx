@@ -1,16 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import {View, Text } from 'react-native';
+import template from './template';
 
 const Home = () => {
-  return (
-    <>
-      <View>
-        <Text>Home Screen</Text>
-      </View>
-      <StatusBar style="auto" />
-    </>
-  );
+  return template();
 }
 
 export default {
