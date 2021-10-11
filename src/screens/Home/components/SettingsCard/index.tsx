@@ -9,7 +9,7 @@ const SettingsCard = () => {
   const sizeAnimation = new Animated.Value(sizeAnimationValue);
 
   function sizeAnimationUpdate() {
-    sizeAnimationValue = sizeAnimationValue ? 0 : 1;
+    sizeAnimationValue = Number(!sizeAnimationValue);
     Animated.timing(sizeAnimation, {
       toValue: sizeAnimationValue,
       duration: 500,
@@ -24,11 +24,15 @@ const SettingsCard = () => {
         {
           marginTop: sizeAnimation.interpolate({
             inputRange: [0, 1],
-            outputRange: [50.0, 0]
+            outputRange: [60.0, 0]
           }),
           marginHorizontal: sizeAnimation.interpolate({
             inputRange: [0, 1],
             outputRange: [20.0, 0]
+          }),
+          paddingTop: sizeAnimation.interpolate({
+            inputRange: [0, 1],
+            outputRange: [30.0, 90.0],
           }),
           borderRadius: sizeAnimation.interpolate({
             inputRange: [0, 1],
@@ -36,14 +40,14 @@ const SettingsCard = () => {
           }),
           height: sizeAnimation.interpolate({
             inputRange: [0, 1],
-            outputRange: [100.0, screenHeight]
+            outputRange: [110.0, screenHeight]
           }),
           
         }
       ]}
     >
       <View style={styles.header}>
-        <Text style={styles.title}>Hello, Fernando</Text>
+        <Text style={styles.title}>Hello <Text style={styles.titleBold}>Jane</Text></Text>
         <TouchableOpacity onPress={() => sizeAnimationUpdate()}>
           <View style={styles.buttonCircle}></View>
         </TouchableOpacity>

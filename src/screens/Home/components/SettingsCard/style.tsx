@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   card: {
     backgroundColor: '#e0e4ff',
-    padding: 25.0,
+    paddingBottom: 30.0,
+    paddingHorizontal: 30.0,
   },
   header: {
     flexDirection: 'row',
@@ -11,8 +12,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   title: {
-    fontSize: 25.0,
-    fontWeight: 'bold',
+    fontSize: 30.0,
+    fontWeight: '300'
+  },
+  titleBold: {
+    fontWeight: 'bold'
   },
   buttonCircle: {
     width: 50.0,
