@@ -23,6 +23,14 @@ const styles = StyleSheet.create({
     height: 50.0,
     borderRadius: 100,
     backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 2,
+    marginLeft: -22.0,
+  },
+  optionsBox: {
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 });
 

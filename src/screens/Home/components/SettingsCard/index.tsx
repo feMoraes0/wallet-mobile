@@ -1,14 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import {Animated, View, Text, TouchableOpacity, Dimensions} from 'react-native';
+import ImageCircle from '../ImageCircle';
 import styles from './style';
+
+import CreditCard from './../../../../assets/icons/credit-card.svg';
+import MainProfile from './../../../../assets/images/profile-main.png';
 
 const { height: screenHeight } = Dimensions.get('screen');
 
 const SettingsCard = () => {
-  var sizeAnimationValue:number = 0;
+  let sizeAnimationValue:number = 0;
   const sizeAnimation = new Animated.Value(sizeAnimationValue);
 
-  function sizeAnimationUpdate() {
+  const sizeAnimationUpdate = () => {
     sizeAnimationValue = Number(!sizeAnimationValue);
     Animated.timing(sizeAnimation, {
       toValue: sizeAnimationValue,
@@ -42,15 +46,46 @@ const SettingsCard = () => {
             inputRange: [0, 1],
             outputRange: [110.0, screenHeight]
           }),
-          
         }
       ]}
     >
       <View style={styles.header}>
         <Text style={styles.title}>Hello <Text style={styles.titleBold}>Jane</Text></Text>
-        <TouchableOpacity onPress={() => sizeAnimationUpdate()}>
-          <View style={styles.buttonCircle}></View>
-        </TouchableOpacity>
+        <View style={styles.optionsBox}>
+          <Animated.View
+            style={{
+              transform: [{
+                translateX: sizeAnimation.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, 28.0]
+                })
+              }]
+            }}
+          >
+            <TouchableOpacity onPress={() => sizeAnimationUpdate()}>
+              <ImageCircle image={MainProfile} />
+            </TouchableOpacity>
+          </Animated.View>
+          <Animated.View
+            style={[
+              {
+                opacity: sizeAnimation.interpolate({
+                  inputRange: [0, 0.5],
+                  outputRange: [1, 0]
+                }),
+                zIndex: sizeAnimation.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [2, -1]
+                })
+              }
+            ]}
+          >
+            <View style={styles.buttonCircle}>
+              <CreditCard />
+            </View>
+          </Animated.View>
+          
+        </View>
       </View>
     </Animated.View>
   )
