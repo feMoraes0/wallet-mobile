@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.4...v0.0.5) (2021-10-11)
+
+
+### Features
+
+* **asset:** adds icons and images assets ([d17d2c9](https://github.com/feMoraes0/wallet-mobile/commit/d17d2c9a94cc54ecf312920129a449efab777008))
+* **imagecircle:** adds image circle component to home screen ([806d246](https://github.com/feMoraes0/wallet-mobile/commit/806d246370bfe83069f64c95a67f46caab6956d8))
+
+
+### Bug Fixes
+
+* **settingscard:** update animation and text style ([92b210b](https://github.com/feMoraes0/wallet-mobile/commit/92b210b1f2f48125fc6332ce6f6102545f747417))
+
+
+### Refactors
+
+* **settingscard:** updates settings card with new image card and animations ([06b0efc](https://github.com/feMoraes0/wallet-mobile/commit/06b0efc3931b1c333f3fe251f6c191436a698c97))
+
 ### [0.0.4](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.3...v0.0.4) (2021-10-10)
 
 
