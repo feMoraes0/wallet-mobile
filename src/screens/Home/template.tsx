@@ -8,6 +8,7 @@ const template = () => {
   return (
     <View style={styles.container}>
       <SettingsCard />
+      <View style={styles.divider} />
     </View>
   );
 }
