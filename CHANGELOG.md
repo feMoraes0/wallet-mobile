@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.5...v0.0.6) (2021-10-12)
+
+
+### Features
+
+* **home:** adds divider to home screen ([c79e4d9](https://github.com/feMoraes0/wallet-mobile/commit/c79e4d92643ff7ffdb950453039c7684ae83923d))
+* **home:** adds main card skeleton ([dfce17d](https://github.com/feMoraes0/wallet-mobile/commit/dfce17d1f05d4b34a85959ff66934c1ea5dcb9bb))
+
+
+### Refactors
+
+* **settingscard:** update horizontal margin and vertical padding ([6f8ed30](https://github.com/feMoraes0/wallet-mobile/commit/6f8ed3070e4cbe72c00031864c6a9fbe974b7b13))
+
 ### [0.0.5](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.4...v0.0.5) (2021-10-11)
 
 
