@@ -32,11 +32,11 @@ const SettingsCard = () => {
           }),
           marginHorizontal: sizeAnimation.interpolate({
             inputRange: [0, 1],
-            outputRange: [20.0, 0]
+            outputRange: [30.0, 0]
           }),
           paddingTop: sizeAnimation.interpolate({
             inputRange: [0, 1],
-            outputRange: [30.0, 90.0],
+            outputRange: [35.0, 95.0],
           }),
           borderRadius: sizeAnimation.interpolate({
             inputRange: [0, 1],
@@ -44,7 +44,7 @@ const SettingsCard = () => {
           }),
           height: sizeAnimation.interpolate({
             inputRange: [0, 1],
-            outputRange: [110.0, screenHeight]
+            outputRange: [120.0, screenHeight]
           }),
         }
       ]}
