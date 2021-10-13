@@ -8,43 +8,53 @@ import MainProfile from './../../../../assets/images/profile-main.png';
 
 const { height: screenHeight } = Dimensions.get('screen');
 
-const SettingsCard = () => {
-  let sizeAnimationValue:number = 0;
-  const sizeAnimation = new Animated.Value(sizeAnimationValue);
+type SettingsCardProps = {
+  animationControl: any,
+  limitAnimationInput: number,
+};
 
-  const sizeAnimationUpdate = () => {
-    sizeAnimationValue = Number(!sizeAnimationValue);
-    Animated.timing(sizeAnimation, {
-      toValue: sizeAnimationValue,
-      duration: 500,
-      useNativeDriver: false,
-    }).start();
-  }
+const SettingsCard = ({ animationControl, limitAnimationInput }: SettingsCardProps) => {
+  // let sizeAnimationValue:number = 0;
+  // const sizeAnimation = new Animated.Value(sizeAnimationValue);
+
+  // const sizeAnimationUpdate = () => {
+  //   sizeAnimationValue = Number(!sizeAnimationValue);
+  //   Animated.timing(sizeAnimation, {
+  //     toValue: sizeAnimationValue,
+  //     duration: 500,
+  //     useNativeDriver: false,
+  //   }).start();
+  // }
 
   return (
     <Animated.View
       style={[
         styles.card,
         {
-          marginTop: sizeAnimation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [60.0, 0]
+          marginTop: animationControl.interpolate({
+            inputRange: [0, limitAnimationInput],
+            outputRange: [60.0, 0],
+            extrapolate: 'clamp',
           }),
-          marginHorizontal: sizeAnimation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [30.0, 0]
+          marginHorizontal: animationControl.interpolate({
+            inputRange: [0, limitAnimationInput],
+            outputRange: [30.0, 0],
+            extrapolate: 'clamp',
           }),
-          paddingTop: sizeAnimation.interpolate({
-            inputRange: [0, 1],
+          paddingTop: animationControl.interpolate({
+            inputRange: [0, limitAnimationInput],
             outputRange: [35.0, 95.0],
+            extrapolate: 'clamp',
           }),
-          borderRadius: sizeAnimation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [20.0, 0]
+          borderRadius: animationControl.interpolate({
+            inputRange: [0, limitAnimationInput],
+            outputRange: [20.0, 0],
+            extrapolate: 'clamp',
           }),
-          height: sizeAnimation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [120.0, screenHeight]
+          height: animationControl.interpolate({
+            inputRange: [0, limitAnimationInput],
+            outputRange: [120.0, screenHeight],
+            extrapolate: 'clamp',
           }),
         }
       ]}
@@ -55,27 +65,30 @@ const SettingsCard = () => {
           <Animated.View
             style={{
               transform: [{
-                translateX: sizeAnimation.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0, 28.0]
+                translateX: animationControl.interpolate({
+                  inputRange: [0, limitAnimationInput],
+                  outputRange: [0, 28.0],
+                  extrapolate: 'clamp',
                 })
               }]
             }}
           >
-            <TouchableOpacity onPress={() => sizeAnimationUpdate()}>
+            <TouchableOpacity onPress={() => null}>
               <ImageCircle image={MainProfile} />
             </TouchableOpacity>
           </Animated.View>
           <Animated.View
             style={[
               {
-                opacity: sizeAnimation.interpolate({
-                  inputRange: [0, 0.5],
-                  outputRange: [1, 0]
+                opacity: animationControl.interpolate({
+                  inputRange: [0, limitAnimationInput],
+                  outputRange: [1, 0],
+                  extrapolate: 'clamp',
                 }),
-                zIndex: sizeAnimation.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [2, -1]
+                zIndex: animationControl.interpolate({
+                  inputRange: [0, limitAnimationInput],
+                  outputRange: [2, -1],
+                  extrapolate: 'clamp',
                 })
               }
             ]}
