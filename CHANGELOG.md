@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.6...v0.0.7) (2021-10-15)
+
+
+### Features
+
+* **animation:** includes pan gesture animation ([0fd581d](https://github.com/feMoraes0/wallet-mobile/commit/0fd581d1cbb46c72ed163c57a8c59f74d095b851))
+* **home:** adds flatlist base and updates pan gesture animation when scroll down ([e93e705](https://github.com/feMoraes0/wallet-mobile/commit/e93e705c784ae5cf36bd298efe361f761500f984))
+
 ### [0.0.6](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.5...v0.0.6) (2021-10-12)
 
 
