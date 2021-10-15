@@ -1,25 +1,50 @@
 import React from 'react';
-import { Animated, View } from 'react-native';
+import { Animated, FlatList, Text, View, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { PanGestureHandler } from 'react-native-gesture-handler';
 import SettingsCard from './components/SettingsCard';
 import styles from './style';
 
+const { width: screenWidth } = Dimensions.get('screen');
+
 const template = () => {
-  const inputRangeMax = 150;
+  const elements: any[] = [
+    {
+      id: 1,
+      name: '1'
+    },
+    {
+      id: 2,
+      name: '2'
+    },
+    {
+      id: 3,
+      name: '3'
+    },
+  ];
+  const inputRangeMax = 350;
   const axisYPosition = new Animated.Value(0);
 
   const handleGesture = Animated.event(
     [
       {
         nativeEvent: {
-          y: axisYPosition,
+          translationY: axisYPosition,
         },
       },
     ],
     {
       useNativeDriver: false,
-    }
+      listener: (event:any) => {
+        if(axisYPosition.__getValue() > 50) {
+          Animated.timing(axisYPosition, {
+            toValue: inputRangeMax,
+            duration: 500,
+            useNativeDriver: false
+          }).start();
+        }
+      }
+    },
   );
 
   return (
@@ -30,13 +55,10 @@ const template = () => {
       />
       <PanGestureHandler
         onGestureEvent={handleGesture}
+        activeOffsetY={0}
+        activeOffsetX={-screenWidth}
       >
         <Animated.View style={[
-          {
-            position: 'absolute',
-            bottom: 110,
-            width: '100%',
-          },
           {
             transform: [
               {
@@ -55,14 +77,25 @@ const template = () => {
           }
         ]}>
           <View style={styles.divider} />
-          <LinearGradient
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 1}}
-            colors={['#4c669f', '#3b5998', '#192f6a']}
-            style={styles.mainCard}
-          >
-            <View />
-          </LinearGradient>
+          <FlatList
+            style={styles.horizontalList}
+            data={elements}
+            keyExtractor={element => element.name}
+            horizontal={true}
+            pagingEnabled
+            renderItem={(element: any) => {
+              return (
+                <LinearGradient
+                  key={element.name}
+                  start={{x: 0, y: 0}}
+                  end={{x: 1, y: 1}}
+                  colors={['#4c669f', '#3b5998', '#192f6a']}
+                  style={styles.mainCard}
+                >
+                </LinearGradient>
+              );
+            }}
+          />
         </Animated.View>
       </PanGestureHandler>
     </View>
