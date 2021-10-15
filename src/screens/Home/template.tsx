@@ -35,8 +35,9 @@ const template = () => {
     ],
     {
       useNativeDriver: false,
-      listener: (event:any) => {
-        if(axisYPosition.__getValue() > 50) {
+      listener: (event: any) => {
+        const { translationY } = event.nativeEvent;
+        if(translationY > 15) {
           Animated.timing(axisYPosition, {
             toValue: inputRangeMax,
             duration: 500,
