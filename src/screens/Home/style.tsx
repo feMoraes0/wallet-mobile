@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
   },
   horizontalList: {
     width: screenWidth,
-    borderWidth: 1.0,
   }
 });
 
