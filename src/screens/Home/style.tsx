@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
   mainCard: {
     height: 480.0,
-    width: (screenWidth * 0.9 - 30.0),
+    width: (screenWidth - 60.0),
     marginHorizontal: 30.0,
     borderRadius: 20.0,
   },
