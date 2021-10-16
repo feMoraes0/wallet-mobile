@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.7...v0.0.8) (2021-10-16)
+
+
+### Features
+
+* **settingscard:** adds new animation to return settings card to initial state ([eeabf28](https://github.com/feMoraes0/wallet-mobile/commit/eeabf281f5aee151ee5b264b6b62319e3585f23f))
+
+
+### Bug Fixes
+
+* **home:** update pan gesture callback data access and rule ([e00357e](https://github.com/feMoraes0/wallet-mobile/commit/e00357e0354aff65cb62f8fe9c688465012da5cc))
+* **home:** updates activeOffsetY threshold ([2dcc91a](https://github.com/feMoraes0/wallet-mobile/commit/2dcc91acc60ac54240b4b2a2620da0227cd3e351))
+
 ### [0.0.7](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.6...v0.0.7) (2021-10-15)
 
 
