@@ -56,7 +56,7 @@ const template = () => {
       />
       <PanGestureHandler
         onGestureEvent={handleGesture}
-        activeOffsetY={0}
+        activeOffsetY={50}
         activeOffsetX={-screenWidth}
       >
         <Animated.View style={[
