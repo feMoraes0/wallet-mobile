@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.8...v0.0.9) (2021-10-17)
+
+
+### Features
+
+* **dualcard/home:** adds new component and update animations to support second animation ([12677bd](https://github.com/feMoraes0/wallet-mobile/commit/12677bdadb3dc73f986393b079fc43a9c72d8189))
+
+
+### Refactors
+
+* **home:** updates credit card width calculation ([68b7e0e](https://github.com/feMoraes0/wallet-mobile/commit/68b7e0eea22379bb6a0d99d30cbeb9f8d77e6f93))
+
 ### [0.0.8](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.7...v0.0.8) (2021-10-16)
 
 
