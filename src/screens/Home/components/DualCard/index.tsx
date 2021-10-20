@@ -7,10 +7,11 @@ import styles from './style';
 const { width: screenWidth, height: screenHeight } = Dimensions.get('screen');
 
 type DualCardProps = {
-  animationController: Animated.Value
+  animationController: Animated.Value,
+  updateScrollControl: Function
 }
 
-const DualCard = ({animationController}: DualCardProps) => {
+const DualCard = ({animationController, updateScrollControl}: DualCardProps) => {
   const handleCreditCardOpenEvent = Animated.event(
     [
       {
@@ -28,7 +29,12 @@ const DualCard = ({animationController}: DualCardProps) => {
             toValue: screenWidth * 0.5,
             duration: 500,
             useNativeDriver: false,
-          }).start();
+          }).start(async () => {
+            await new Promise(() => setTimeout(() => {
+              updateScrollControl(false);
+              console.log('dit it open');
+            }, 800));
+          });
         }
       },
     }
@@ -41,7 +47,12 @@ const DualCard = ({animationController}: DualCardProps) => {
         toValue: 0,
         duration: 500,
         useNativeDriver: false,
-      }).start();
+      }).start(() => {
+        setTimeout(() => {
+          updateScrollControl(true);
+          console.log('did it close');
+        }, 700);
+      });
     } else {
       animationController.setValue((screenWidth * 0.5) + nativeEvent.translationX);
     }

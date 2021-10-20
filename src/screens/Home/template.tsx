@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Animated, FlatList, View, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { PanGestureHandler } from 'react-native-gesture-handler';
@@ -17,6 +17,7 @@ const template = () => {
   const inputRangeMax = 350;
   const axisYPosition = new Animated.Value(0);
   const initialCardAnimationController = new Animated.Value(0);
+  const [isScrollable, setIsScrollable] = useState(true);
 
   const handleGesture = Animated.event(
     [
@@ -41,6 +42,10 @@ const template = () => {
       }
     },
   );
+
+  const updateScrollControl = (state: boolean) => {
+    setIsScrollable(state);
+  }
 
   return (
     <View style={styles.container}>
@@ -100,11 +105,11 @@ const template = () => {
               keyExtractor={element => element.name}
               horizontal={true}
               pagingEnabled
-              scrollEnabled={false}
+              scrollEnabled={isScrollable}
               renderItem={({item, index}) => {
                 return ((index === 0)
                   ?
-                    <DualCard animationController={initialCardAnimationController} />
+                    <DualCard animationController={initialCardAnimationController} updateScrollControl={updateScrollControl} />
                   :
                     <LinearGradient
                       key={item.name}
