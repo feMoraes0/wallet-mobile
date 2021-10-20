@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.9...v0.0.10) (2021-10-20)
+
+
+### Bug Fixes
+
+* **dual-card:** implements new way to control gesture and flatlist interaction ([1561fad](https://github.com/feMoraes0/wallet-mobile/commit/1561fad0ac035220f37958072c1417b53c10478b))
+
 ### [0.0.9](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.8...v0.0.9) (2021-10-17)
 
 
