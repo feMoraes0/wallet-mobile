@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
   backgroundCard: {
     position: 'absolute',
-    backgroundColor: '#f00',
+    backgroundColor: '#070A39',
     borderRadius: 20.0,
   }
 });

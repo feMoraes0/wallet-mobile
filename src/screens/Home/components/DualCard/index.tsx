@@ -3,6 +3,7 @@ import { Animated, Dimensions } from 'react-native';
 import { PanGestureHandler } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from './style';
+import NewCard from '../NewCard';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('screen');
 
@@ -103,7 +104,9 @@ const DualCard = ({animationController, updateScrollControl}: DualCardProps) => 
               }),
             }
           ]}
-        />
+        >
+          <NewCard />
+        </Animated.View>
       </PanGestureHandler>
       <PanGestureHandler
         onGestureEvent={handleCreditCardOpenEvent}
