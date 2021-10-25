@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.10...v0.0.11) (2021-10-25)
+
+
+### Features
+
+* **dual-card:** adds new-card to background card and changes background colour ([e4b3551](https://github.com/feMoraes0/wallet-mobile/commit/e4b35516a53ab3bd3ced00e9d2f7ea6d6727eb16))
+* **new-card:** adds new card component with only basic options ([1e53c33](https://github.com/feMoraes0/wallet-mobile/commit/1e53c33e150f30b776ae16224afb644cb1c32d2e))
+
+
+### Refactors
+
+* **styles:** updates styles extension to ts, was tsx wrongly ([06f7aed](https://github.com/feMoraes0/wallet-mobile/commit/06f7aedd208ef18b36a643bb5d14bfba74eb5434))
+
 ### [0.0.10](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.9...v0.0.10) (2021-10-20)
 
 
