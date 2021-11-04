@@ -42,3 +42,5 @@ jobs:
       
       - name: Release new version
         run: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
