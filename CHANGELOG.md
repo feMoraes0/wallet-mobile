@@ -1,3 +1,11 @@
+## [0.0.12](https://github.com/feMoraes0/wallet-mobile/compare/v0.0.11...v0.0.12) (2021-11-04)
+
+
+### Bug Fixes
+
+* **github-ci:** adds github token in the ci configuraton file at release step ([628582e](https://github.com/feMoraes0/wallet-mobile/commit/628582ed18c3957ecbaf234b63639bfb23a0e7e0))
+* **github-ci:** adds name to package.json file due an error in ci configuration file ([4605357](https://github.com/feMoraes0/wallet-mobile/commit/460535753ff89d2931aca76b88343d957f535192))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
