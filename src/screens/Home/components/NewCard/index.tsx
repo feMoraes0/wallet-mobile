@@ -1,33 +1,32 @@
 import React from 'react';
-import { SafeAreaView, View, Text } from 'react-native';
 import Euro from '../../../../assets/icons/euro.svg';
 import Pounds from '../../../../assets/icons/pounds.svg';
 import CreditCard from '../../../../assets/icons/credit-card.svg';
 import AccountCard from '../../../../assets/icons/account-card.svg';
-import styles from './style';
+import { CircleAvatarIcon, CircleAvatarIconBack, Container, CreditCardOption, Currency, OpenAccountOption, Options, OptionsText } from './style';
 
 const NewCard = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.options}>
-        <View style={styles.optionCreditCard}>
+    <Container>
+      <Options>
+        <CreditCardOption>
           <CreditCard stroke='#fff' />
-          <Text style={[styles.optionCreditCardText, styles.optionText]}>Credit card</Text>
-        </View>
-        <View style={styles.optionOpenAccount}>
+          <OptionsText>Credit card</OptionsText>
+        </CreditCardOption>
+        <OpenAccountOption>
           <AccountCard stroke='#fff' />
-          <Text style={[styles.optionCreditCardText, styles.optionText]}>Open an account</Text>
-          <View style={styles.currency}>
-            <View style={[styles.rounded, styles.currencyBack]}>
+          <OptionsText>Open an account</OptionsText>
+          <Currency>
+            <CircleAvatarIconBack>
               <Pounds />
-            </View>
-            <View style={styles.rounded}>
+            </CircleAvatarIconBack>
+            <CircleAvatarIcon>
               <Euro />
-            </View>
-          </View>
-        </View>
-      </View>
-    </SafeAreaView>
+            </CircleAvatarIcon>
+          </Currency>
+        </OpenAccountOption>
+      </Options>
+    </Container>
   );
 };
 
